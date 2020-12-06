@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AdminNavBarLinks from "./AdminNavBarLinks";
+import { useDispatch, useSelector } from 'react-redux';
 
-const NavBar = () => {
+const NavBar = (props) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    // const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+    const dispatch = useDispatch();
+
+    console.log(props);
+
+    const isLoggedIn = useSelector(state => state.userAuth.isLoggedIn);
+
+    console.log('isLoggedIn here')
+    console.log(isLoggedIn)
 
     return (
         <div>

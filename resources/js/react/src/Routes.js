@@ -4,11 +4,16 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Dashboard from "./components/admin/Dashboard";
 import Logout from "./components/admin/Logout";
-import Login from './components/auth/Login'
+import Login from './components/auth/Login';
+import { useDispatch, useSelector } from 'react-redux';
 
-const Routes = () => {
+const Routes = (props) => {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(true);
+    // const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+    const dispatch = useDispatch();
+
+    const isLoggedIn = useSelector(state => state.userAuth.isLoggedIn);
 
     return (
         <div>
