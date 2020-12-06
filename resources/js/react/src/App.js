@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
-import MasterPage from "./components/MasterPage";
+import MasterPage from "./components/layouts/MasterPage";
 
 const App = () => {
     return (
