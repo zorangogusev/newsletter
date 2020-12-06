@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts/master');
 });
+
+
+// when refresh to avoid 404 not found page
+Route::get('/{any}', function () {
+    return view('layouts/master');
+})->where('any', '^(?!api).*$');
