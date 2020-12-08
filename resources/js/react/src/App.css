@@ -1,0 +1,15 @@
+.main-page-navbar .navbar-dark .navbar-brand,
+.main-page-navbar .navbar-dark .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+.margin-top-div-login {
+    margin-top: 100px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .margin-top-div-login {
+        margin-top: 50px;
+    }
+}

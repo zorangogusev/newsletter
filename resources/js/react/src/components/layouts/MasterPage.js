@@ -8,7 +8,9 @@ const MasterPage = () => {
         <div>
             <Router>
                 <NavBar />
-                <Routes/>
+                <div className="container">
+                    <Routes/>
+                </div>
             </Router>
         </div>
     );

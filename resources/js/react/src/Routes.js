@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { Route, Redirect } from "react-router";
-import Home from "./components/pages/Home";
-import About from "./components/pages/About";
-import Dashboard from "./components/admin/Dashboard";
-import Logout from "./components/admin/Logout";
-import Login from './components/auth/Login';
 import { useDispatch, useSelector } from 'react-redux';
 
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Dashboard from "./components/pages/admin/Dashboard";
+import Logout from "./components/pages/admin/Logout";
+import Login from './components/pages/admin/auth/Login';
+import Register from "./components/pages/admin/auth/Register";
+
+
 const Routes = (props) => {
-
-    // const [isLoggedIn, setIsLoggedIn] = useState(true);
-
-    const dispatch = useDispatch();
-
     const isLoggedIn = useSelector(state => state.userAuth.isLoggedIn);
 
     return (
@@ -21,6 +19,9 @@ const Routes = (props) => {
             <Route exact path="/about" component={About} />
             <Route path="/login" render={props => (
                 isLoggedIn ? <Redirect to={{ pathname: 'admin-pages/dashboard', state: { from: props.location } }} /> : <Login {...props} />
+            )} />
+            <Route path="/register" render={props => (
+                isLoggedIn ? <Redirect to={{ pathname: 'admin-pages/dashboard', state: { from: props.location } }} /> : <Register {...props} />
             )} />
 
         {/* ======= Admin Routes ======== */}

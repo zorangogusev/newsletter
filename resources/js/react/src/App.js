@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom'
 import MasterPage from "./components/layouts/MasterPage";
 import { store } from "./createStore";
 import { Provider } from 'react-redux';
+import './App.css';
 
 const App = () => {
     return (
-        <div className="container">
+        <div>
             <MasterPage />
         </div>
     );

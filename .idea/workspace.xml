@@ -2,20 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d94b6d3-fe45-4a1c-8816-d7ab2c89324e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/jwt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/news.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/news.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/admin/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/admin/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/layouts/MasterPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/layouts/MasterPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/layouts/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/layouts/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/RootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/User/Auth/UserAuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/Auth/UserAuthReducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -158,20 +161,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../contact-manager/react-contact-manager" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/components/pages" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/components/admin" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/react/src" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/components/admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,7 +218,8 @@
       <workItem from="1607205683691" duration="10038000" />
       <workItem from="1607265558283" duration="10664000" />
       <workItem from="1607281956212" duration="8875000" />
-      <workItem from="1607370356460" duration="13066000" />
+      <workItem from="1607370356460" duration="13567000" />
+      <workItem from="1607441909458" duration="8459000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -250,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607294258880</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Install JWT token and implement, create AuthController">
+      <created>1607388447698</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607388447698</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +288,8 @@
     <MESSAGE value="Create Login, Lougout, Routes.js, Dashboard, AdminNavBarLinks components&#10;protect admin routes if admin is not loggedIn" />
     <MESSAGE value=".docker files" />
     <MESSAGE value="Install, implement redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Install, implement redux" />
+    <MESSAGE value="Install JWT token and implement, create AuthController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Install JWT token and implement, create AuthController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
