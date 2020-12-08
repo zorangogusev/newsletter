@@ -9,7 +9,7 @@ const AdminNavBarLinks = () => {
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Admin
                 </a>
-                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown" style={{ backgroundColor: '#3f51b5', zIndex: '10000'}}>
                     <Link className="nav-item" to="/admin-pages/dashboard">
                         <span className="nav-link">Dashboard</span>
                     </Link>

@@ -11,7 +11,7 @@ import Register from "./components/pages/admin/auth/Register";
 
 
 const Routes = (props) => {
-    const isLoggedIn = useSelector(state => state.userAuth.isLoggedIn);
+    const isLoggedIn = useSelector(state => state.adminAuth.isLoggedIn);
 
     return (
         <div>

@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AdminNavBarLinks from "./AdminNavBarLinks";
 import { useDispatch, useSelector } from 'react-redux';
-import DehazeIcon from '@material-ui/icons/Dehaze';
 
 const NavBar = (props) => {
 
-    const isLoggedIn = useSelector(state => state.userAuth.isLoggedIn);
+    const isLoggedIn = useSelector(state => state.adminAuth.isLoggedIn);
 
     return (
         <div className="main-page-navbar">
@@ -17,7 +16,6 @@ const NavBar = (props) => {
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
-                        {/*<DehazeIcon  style={{ borderColor: '#FFF'}} />*/}
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
