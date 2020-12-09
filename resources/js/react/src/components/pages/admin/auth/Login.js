@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useStyles } from "../../../../styles";
 import Card from '@material-ui/core/Card';
@@ -6,15 +6,22 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { useDispatch, useSelector } from 'react-redux';
-import { AdminLoginAction } from "../../../../store/actions/Admin/Auth/AdminAuthActions";
+import {AdminLoginAction, resetAdminAuthResponseAction} from "../../../../store/actions/Admin/Auth/AdminAuthActions";
 
 const Login = (props) => {
 
     const dispatch = useDispatch();
 
+    const adminAuthResponse = useSelector(state => state.adminAuth.adminAuthResponse);
+
     const [inputFields, setValues] = useState({email:'', password:''});
 
     const classes = useStyles();
+
+    useEffect(() => {
+        // console.log('useEffect here')
+        dispatch(resetAdminAuthResponseAction())
+    }, [])
 
     const handleInputChange = (e) => {
         console.log('handleInputChange here')
@@ -27,10 +34,31 @@ const Login = (props) => {
 
     const adminLogin = (e) => {
         e.preventDefault();
-        console.log('adminLogin here');
-        console.log(props);
-
+        // console.log('adminLogin here');
         dispatch(AdminLoginAction(inputFields, props));
+    }
+
+    const displayMessage = (adminAuthResponse) => {
+        let divForMessages = document.querySelector('.div-for-messages');
+        divForMessages.innerHTML = '';
+
+        if(typeof adminAuthResponse == 'string') {
+            divForMessages.innerHTML = '<div class="alert alert-success p-2 border-radius-5px">' + adminAuthResponse + '</div>';
+        }
+
+        if(adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == true) {
+            console.log('displayMessage success == true here')
+
+        } else if(adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == false) {
+            if(typeof adminAuthResponse.data.message == "object") {
+                for(let message in adminAuthResponse.data.message) {
+                    // console.log(`${message}: ${(adminAuthResponse.data.message[message])}`)
+                    divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message[message] +  '</div>';
+                }
+            } else if(typeof adminAuthResponse.data.message == "string") {
+                divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message +  '</div>';
+            }
+        }
     }
 
     return (
@@ -38,6 +66,10 @@ const Login = (props) => {
             <div className="margin-top-div-login">
                 <Card className="p-2 text-center">
                     <h2 className="my-5"><b>Welcome to Admin Login</b></h2>
+
+                    { adminAuthResponse != '' && typeof adminAuthResponse != null ?  displayMessage(adminAuthResponse) : ''}
+                    <div className="div-for-messages"></div>
+
                     <form onSubmit={adminLogin}>
                         <div>
                             <TextField
@@ -61,7 +93,6 @@ const Login = (props) => {
                                     required
                                     margin="normal"
                                     variant="outlined"
-                                    required
                                     id="password"
                                     onChange={handleInputChange}
                                     value={inputFields.password}

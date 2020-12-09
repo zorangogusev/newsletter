@@ -21,23 +21,15 @@ class AuthController extends Controller
         $validator = validator($request->all(), [
             'firstname' => 'required|string',
             'lastname' => 'required|string',
-            'email' => 'required|email',
-            'password' => 'required|string|min:6',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
         ]);
 
         if($validator->fails()) {
             return response()->json([
                 'success' => false,
-                'message' => $validator->messages()->toArray()
-            ], 400);
-        }
-
-        $check_email = $this->user->where('email', $request->email)->count();
-        if ($check_email > 0) {
-            return response()->json([
-                'success' => false,
-                'message' => 'this email already exist please try another email'
-            ], 200);
+                'message' => $validator->errors()
+            ]);
         }
 
         $registerComplete = $this->user::create([
@@ -55,14 +47,14 @@ class AuthController extends Controller
     public function login(Request $request) {
         $validator = validator($request->only('email', 'password'), [
             'email' => 'required|email',
-            'password' => 'required|string|min:6',
+            'password' => 'required',
         ]);
 
         if($validator->fails()) {
             return response()->json([
                 'success' => false,
                 'message' => $validator->messages()->toArray()
-            ], 400);
+            ]);
         }
 
         $jwt_token = null;
@@ -78,7 +70,8 @@ class AuthController extends Controller
 
         return response()->json([
             'success' => true,
-            'token' => $jwt_token
+            'token' => $jwt_token,
+            'message' => 'Redirecting to dashboard.'
         ]);
     }
 }

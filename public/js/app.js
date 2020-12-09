@@ -13158,37 +13158,6 @@ exports.default = _default;
 
 /***/ }),
 
-/***/ "./node_modules/@material-ui/icons/Dehaze.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@material-ui/icons/Dehaze.js ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var React = _interopRequireWildcard(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@material-ui/icons/utils/createSvgIcon.js"));
-
-var _default = (0, _createSvgIcon.default)( /*#__PURE__*/React.createElement("path", {
-  d: "M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z"
-}), 'Dehaze');
-
-exports.default = _default;
-
-/***/ }),
-
 /***/ "./node_modules/@material-ui/icons/utils/createSvgIcon.js":
 /*!****************************************************************!*\
   !*** ./node_modules/@material-ui/icons/utils/createSvgIcon.js ***!
@@ -22951,7 +22920,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".main-page-navbar .navbar-dark .navbar-brand,\n.main-page-navbar .navbar-dark .navbar-nav .nav-link {\n    color: #fff !important;\n}\n\n.margin-top-div-login {\n    margin-top: 100px;\n}\n\n\n@media only screen and (max-width: 767px) {\n    .margin-top-div-login {\n        margin-top: 50px;\n    }\n}\n", ""]);
+exports.push([module.i, ".main-page-navbar .navbar-dark .navbar-brand,\n.main-page-navbar .navbar-dark .navbar-nav .nav-link {\n    color: #fff !important;\n}\n\n.margin-top-div-login {\n    margin-top: 100px;\n}\n\n.border-radius-5px {\n    border-radius: 5px;\n}\n\n@media only screen and (max-width: 767px) {\n    .margin-top-div-login {\n        margin-top: 50px;\n    }\n}\n", ""]);
 
 // exports
 
@@ -95389,7 +95358,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Routes = function Routes(props) {
   var isLoggedIn = Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["useSelector"])(function (state) {
-    return state.userAuth.isLoggedIn;
+    return state.adminAuth.isLoggedIn;
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
@@ -95482,7 +95451,11 @@ var AdminNavBarLinks = function AdminNavBarLinks() {
     "aria-expanded": "false"
   }, "Admin"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dropdown-menu",
-    "aria-labelledby": "navbarDropdown"
+    "aria-labelledby": "navbarDropdown",
+    style: {
+      backgroundColor: '#3f51b5',
+      zIndex: '10000'
+    }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     className: "nav-item",
     to: "/admin-pages/dashboard"
@@ -95543,9 +95516,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _AdminNavBarLinks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AdminNavBarLinks */ "./resources/js/react/src/components/layouts/AdminNavBarLinks.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Dehaze */ "./node_modules/@material-ui/icons/Dehaze.js");
-/* harmony import */ var _material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Dehaze__WEBPACK_IMPORTED_MODULE_4__);
-
 
 
 
@@ -95553,7 +95523,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var NavBar = function NavBar(props) {
   var isLoggedIn = Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["useSelector"])(function (state) {
-    return state.userAuth.isLoggedIn;
+    return state.adminAuth.isLoggedIn;
   });
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "main-page-navbar"
@@ -95712,7 +95682,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
 /* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "./node_modules/@material-ui/icons/AccountCircle.js");
 /* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../store/actions/Admin/Auth/AdminAuthActions */ "./resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -95723,13 +95715,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var Login = function Login(props) {
-  var _React$createElement;
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
+  var adminAuthResponse = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(function (state) {
+    return state.adminAuth.adminAuthResponse;
+  });
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    email: '',
+    password: ''
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      inputFields = _useState2[0],
+      setValues = _useState2[1];
 
   var classes = Object(_styles__WEBPACK_IMPORTED_MODULE_2__["useStyles"])();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    // console.log('useEffect here')
+    dispatch(Object(_store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__["resetAdminAuthResponseAction"])());
+  }, []);
+
+  var handleInputChange = function handleInputChange(e) {
+    console.log('handleInputChange here');
+    console.log(e.target.value);
+    setValues(_objectSpread(_objectSpread({}, inputFields), {}, _defineProperty({}, e.target.id, e.target.value)));
+  };
 
   var adminLogin = function adminLogin(e) {
-    e.preventDefault();
-    console.log('adminLogin here');
+    e.preventDefault(); // console.log('adminLogin here');
+
+    dispatch(Object(_store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__["AdminLoginAction"])(inputFields, props));
+  };
+
+  var displayMessage = function displayMessage(adminAuthResponse) {
+    var divForMessages = document.querySelector('.div-for-messages');
+    divForMessages.innerHTML = '';
+
+    if (typeof adminAuthResponse == 'string') {
+      divForMessages.innerHTML = '<div class="alert alert-success p-2 border-radius-5px">' + adminAuthResponse + '</div>';
+    }
+
+    if (adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == true) {
+      console.log('displayMessage success == true here');
+    } else if (adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == false) {
+      if (_typeof(adminAuthResponse.data.message) == "object") {
+        for (var message in adminAuthResponse.data.message) {
+          // console.log(`${message}: ${(adminAuthResponse.data.message[message])}`)
+          divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message[message] + '</div>';
+        }
+      } else if (typeof adminAuthResponse.data.message == "string") {
+        divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message + '</div>';
+      }
+    }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -95738,7 +95774,9 @@ var Login = function Login(props) {
     className: "p-2 text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "my-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Welcome to Admin Login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Welcome to Admin Login")), adminAuthResponse != '' && typeof adminAuthResponse != null ? displayMessage(adminAuthResponse) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-for-messages"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: adminLogin
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     type: "email",
@@ -95747,15 +95785,20 @@ var Login = function Login(props) {
     margin: "normal",
     variant: "outlined",
     label: "email",
-    id: "email"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], (_React$createElement = {
+    id: "email",
+    onChange: handleInputChange,
+    value: inputFields.email
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: classes.fullWidth,
     label: "Password",
     type: "password",
     required: true,
     margin: "normal",
-    variant: "outlined"
-  }, _defineProperty(_React$createElement, "required", true), _defineProperty(_React$createElement, "id", "password"), _React$createElement))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: "outlined",
+    id: "password",
+    onChange: handleInputChange,
+    value: inputFields.password
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
     type: "submit",
     className: classes.fullWidth,
     style: {
@@ -95804,7 +95847,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Button */ "./node_modules/@material-ui/core/esm/Button/index.js");
 /* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/AccountCircle */ "./node_modules/@material-ui/icons/AccountCircle.js");
 /* harmony import */ var _material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_AccountCircle__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../store/actions/Admin/Auth/AdminAuthActions */ "./resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -95815,13 +95880,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var Register = function Register(props) {
-  var _React$createElement;
-
+  var dispatch = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useDispatch"])();
+  var adminAuthResponse = Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["useSelector"])(function (state) {
+    return state.adminAuth.adminAuthResponse;
+  });
   var classes = Object(_styles__WEBPACK_IMPORTED_MODULE_2__["useStyles"])();
 
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: ''
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      inputFields = _useState2[0],
+      setValues = _useState2[1];
+
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    dispatch(Object(_store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__["resetAdminAuthResponseAction"])());
+  });
+
+  var handleInputChange = function handleInputChange(e) {
+    // console.log('handleInputChange here')
+    setValues(_objectSpread(_objectSpread({}, inputFields), {}, _defineProperty({}, e.target.id, e.target.value)));
+  };
+
   var adminRegister = function adminRegister(e) {
-    e.preventDefault();
-    console.log('adminRegister here');
+    e.preventDefault(); // console.log('adminRegister here');
+
+    dispatch(Object(_store_actions_Admin_Auth_AdminAuthActions__WEBPACK_IMPORTED_MODULE_8__["AdminRegisterAction"])(inputFields, props));
+  };
+
+  var displayMessage = function displayMessage(adminAuthResponse) {
+    var divForMessages = document.querySelector('.div-for-messages');
+    divForMessages.innerHTML = '';
+
+    if (typeof adminAuthResponse == 'string') {
+      divForMessages.innerHTML = '<div class="alert alert-success p-2 border-radius-5px">' + adminAuthResponse + '</div>';
+    }
+
+    if (adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == true) {
+      console.log('displayMessage success == true here');
+    } else if (adminAuthResponse.data != '' && typeof adminAuthResponse.data !== 'undefined' && adminAuthResponse.data.success == false) {
+      if (_typeof(adminAuthResponse.data.message) == "object") {
+        for (var message in adminAuthResponse.data.message) {
+          // console.log(`${message}: ${(adminAuthResponse.data.message[message])}`)
+          divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message[message] + '</div>';
+        }
+      } else if (typeof adminAuthResponse.data.message == "string") {
+        divForMessages.innerHTML += '<div class="alert alert-danger p-2 border-radius-5px">' + adminAuthResponse.data.message + '</div>';
+      }
+    }
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -95830,7 +95939,9 @@ var Register = function Register(props) {
     className: "p-2 text-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "my-5"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Welcome to Admin Register")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", null, "Welcome to Admin Register")), adminAuthResponse != '' && typeof adminAuthResponse != null ? displayMessage(adminAuthResponse) : '', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "div-for-messages"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     onSubmit: adminRegister
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     type: "text",
@@ -95839,7 +95950,9 @@ var Register = function Register(props) {
     margin: "normal",
     variant: "outlined",
     label: "First Name",
-    id: "firstname"
+    id: "firstname",
+    onChange: handleInputChange,
+    value: inputFields.firstname
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     type: "text",
     className: classes.fullWidth,
@@ -95847,7 +95960,9 @@ var Register = function Register(props) {
     margin: "normal",
     variant: "outlined",
     label: "Last Name",
-    id: "lastname"
+    id: "lastname",
+    onChange: handleInputChange,
+    value: inputFields.lastname
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     type: "email",
     className: classes.fullWidth,
@@ -95855,15 +95970,20 @@ var Register = function Register(props) {
     margin: "normal",
     variant: "outlined",
     label: "email",
-    id: "email"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], (_React$createElement = {
+    id: "email",
+    onChange: handleInputChange,
+    value: inputFields.email
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: classes.fullWidth,
     label: "Password",
     type: "password",
     required: true,
     margin: "normal",
-    variant: "outlined"
-  }, _defineProperty(_React$createElement, "required", true), _defineProperty(_React$createElement, "id", "password"), _React$createElement))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    variant: "outlined",
+    id: "password",
+    onChange: handleInputChange,
+    value: inputFields.password
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5__["default"], {
     type: "submit",
     className: classes.fullWidth,
     style: {
@@ -95918,30 +96038,165 @@ var store = createStoreWithMiddleware(_store_reducers_RootReducer__WEBPACK_IMPOR
 
 /***/ }),
 
-/***/ "./resources/js/react/src/store/reducers/Admin/Auth/UserAuthReducer.js":
+/***/ "./resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js":
 /*!*****************************************************************************!*\
-  !*** ./resources/js/react/src/store/reducers/Admin/Auth/UserAuthReducer.js ***!
+  !*** ./resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js ***!
   \*****************************************************************************/
+/*! exports provided: AdminRegisterAction, AdminLoginAction, resetAdminAuthResponseAction */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminRegisterAction", function() { return AdminRegisterAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AdminLoginAction", function() { return AdminLoginAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "resetAdminAuthResponseAction", function() { return resetAdminAuthResponseAction; });
+var axios = window.axios;
+var BASE_API_URL = 'http://newsletter.deb.test:8081/api/';
+var AdminRegisterAction = function AdminRegisterAction(inputFields, props) {
+  console.log('AdminRegisterAction here');
+  console.log(inputFields);
+  return function (dispatch) {
+    dispatch({
+      type: 'RESET_AUTH_RESPONSE'
+    });
+    dispatch({
+      type: 'LOADING'
+    });
+    axios.post(BASE_API_URL + 'admin/register', inputFields).then(function (response) {
+      if (response.data.hasOwnProperty('success') && response.data.success == true) {
+        localStorage.setItem('admin-token', response.data.token);
+        dispatch({
+          type: 'REGISTER_SUCCESS',
+          response: response
+        });
+      } else if (response.data.hasOwnProperty('success') && response.data.success == false) {
+        dispatch({
+          type: 'REGISTER_ERROR',
+          response: response
+        });
+      }
+    })["catch"](function (response) {
+      console.log('catch error here');
+      dispatch({
+        type: 'REGISTER_ERROR',
+        response: response
+      });
+    });
+  };
+};
+var AdminLoginAction = function AdminLoginAction(inputFields, props) {
+  return function (dispatch) {
+    dispatch({
+      type: 'RESET_AUTH_RESPONSE'
+    });
+    dispatch({
+      type: 'LOADING'
+    });
+    axios.post(BASE_API_URL + 'admin/login', inputFields).then(function (response) {
+      if (response.data.hasOwnProperty('success') && response.data.success == true) {
+        localStorage.setItem('admin-token', response.data.token);
+        dispatch({
+          type: 'LOGIN_SUCCESS',
+          response: response
+        });
+      } else if (response.data.hasOwnProperty('success') && response.data.success == false) {
+        dispatch({
+          type: 'LOGIN_ERROR',
+          response: response
+        });
+      }
+    })["catch"](function (response) {
+      console.log('catch error here');
+      dispatch({
+        type: 'LOGIN_ERROR',
+        response: response
+      });
+    });
+  };
+};
+var resetAdminAuthResponseAction = function resetAdminAuthResponseAction() {
+  return function (dispatch) {
+    // console.log('resetAdminAuthResponseAction here')
+    dispatch({
+      type: 'RESET_AUTH_RESPONSE'
+    });
+  };
+};
+
+/***/ }),
+
+/***/ "./resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js":
+/*!******************************************************************************!*\
+  !*** ./resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js ***!
+  \******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var initState = {
-  isLoggedIn: false
+  isLoggedIn: localStorage.getItem('admin-token') ? true : false,
+  adminAuthResponse: ''
 };
 
-var UserAuthReducer = function UserAuthReducer() {
+var AdminAuthReducer = function AdminAuthReducer() {
   var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initState;
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
+    case 'REGISTER_SUCCESS':
+      // console.log('reducer REGISTER_SUCCESS here')
+      // console.log(action.response)
+      return _objectSpread(_objectSpread({}, state), {}, {
+        adminAuthResponse: 'Registered successfully.',
+        isLoggedIn: true
+      });
+
+    case 'REGISTER_ERROR':
+      // console.log('reducer REGISTER_ERROR here');
+      // console.log(action.response)
+      return _objectSpread(_objectSpread({}, state), {}, {
+        adminAuthResponse: action.response
+      });
+
+    case 'LOGIN_SUCCESS':
+      // console.log('LOGIN_SUCCESS here')
+      // console.log(action.response)
+      return _objectSpread(_objectSpread({}, state), {}, {
+        isLoggedIn: true
+      });
+
+    case 'LOGIN_ERROR':
+      // console.log('LOGIN_ERROR here')
+      // console.log(action.response)
+      return _objectSpread(_objectSpread({}, state), {}, {
+        adminAuthResponse: action.response
+      });
+
+    case 'RESET_AUTH_RESPONSE':
+      // console.log('RESET_AUTH_RESPONSE here')
+      return _objectSpread(_objectSpread({}, state), {}, {
+        adminAuthResponse: ''
+      });
+
+    case 'LOADING':
+      // console.log('LOADING here')
+      return _objectSpread(_objectSpread({}, state), {}, {
+        adminAuthResponse: 'Loading...'
+      });
+
     default:
       return state;
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (UserAuthReducer);
+/* harmony default export */ __webpack_exports__["default"] = (AdminAuthReducer);
 
 /***/ }),
 
@@ -95955,11 +96210,11 @@ var UserAuthReducer = function UserAuthReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _Admin_Auth_UserAuthReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Admin/Auth/UserAuthReducer */ "./resources/js/react/src/store/reducers/Admin/Auth/UserAuthReducer.js");
+/* harmony import */ var _Admin_Auth_AdminAuthReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Admin/Auth/AdminAuthReducer */ "./resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js");
 
 
 var RootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  userAuth: _Admin_Auth_UserAuthReducer__WEBPACK_IMPORTED_MODULE_1__["default"]
+  adminAuth: _Admin_Auth_AdminAuthReducer__WEBPACK_IMPORTED_MODULE_1__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (RootReducer);
 
