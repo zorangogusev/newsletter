@@ -8,7 +8,7 @@ const Dashboard = (props) => {
 
     const dispatch = useDispatch();
 
-    const adminNewsResponse = useSelector(state => state.adminNews.adminNewsResponse.data);
+    const adminNewsResponse = useSelector(state => state.adminNews.adminNewsResponse);
 
     useEffect(() => {
         dispatch(getAllNews())
@@ -23,7 +23,7 @@ const Dashboard = (props) => {
             )
         }
 
-        return  adminNewsResponse.map((news) => (
+        return  adminNewsResponse.data.map((news) => (
             <tr key={news.id}>
                 <td>{news.id}</td>
                 <td>{news.title}</td>

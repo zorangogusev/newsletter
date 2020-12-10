@@ -17,3 +17,21 @@ export const getAllNews = () => {
         });
     }
 }
+
+export const addNews = (fields) => {
+
+    return (dispatch) => {
+        console.log('addNews here')
+        let token = localStorage.getItem('admin-token')
+        fields.token = token;
+        axios.post(BASE_API_URL + 'admin/add-news', fields)
+            .then(response => {
+                // console.log(response);
+                dispatch({type:'ADD_NEW_NEWS_SUCCESS', response})
+                window.location.href = '/admin-pages/dashboard';
+            }).catch(response => {
+            console.log('catch error here')
+            dispatch({type:'ADD_NEW_NEWS_ERROR', response})
+        });
+    }
+}
