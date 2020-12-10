@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +27,9 @@ Route::group([ 'prefix' => 'admin', 'namespace' => 'User'], function() {
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth']], function(){
+
+    Route::get('/get-all-news/{token}', [NewsController::class, 'getAllNews']);
+    Route::post('/add-news', [NewsController::class, 'addNews']);
 
     Route::post('logout', [AuthController::class, 'logout']);
 });

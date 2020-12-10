@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d94b6d3-fe45-4a1c-8816-d7ab2c89324e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/News.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_10_160508_create_news_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/NewsContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/EditNews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/RootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/RootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -156,17 +163,17 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/react/src" />
-      <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/components/pages" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/components/admin" />
       <recent name="$PROJECT_DIR$/test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/react/src" />
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
     </key>
   </component>
@@ -211,7 +218,9 @@
       <workItem from="1607281956212" duration="8875000" />
       <workItem from="1607370356460" duration="13567000" />
       <workItem from="1607441909458" duration="24237000" />
-      <workItem from="1607524821447" duration="23870000" />
+      <workItem from="1607524821447" duration="24501000" />
+      <workItem from="1607610401883" duration="2503000" />
+      <workItem from="1607613264680" duration="11685000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -276,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607538018113</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Logout Admin">
+      <created>1607559547492</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607559547492</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +320,8 @@
     <MESSAGE value="Install JWT token and implement, create AuthController" />
     <MESSAGE value="Install Material-ui, Login page form, Register page form" />
     <MESSAGE value="Actions for Register and Login Admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actions for Register and Login Admin" />
+    <MESSAGE value="Logout Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logout Admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -361,12 +378,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/api.php</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/api.php</url>
-          <line>22</line>
+          <line>23</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -376,12 +393,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/api.php</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/routes/api.php</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -408,6 +425,11 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
           <line>84</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>21</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

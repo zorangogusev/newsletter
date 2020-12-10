@@ -8,6 +8,8 @@ import Dashboard from "./components/pages/admin/Dashboard";
 import Logout from "./components/pages/admin/Logout";
 import Login from './components/pages/admin/auth/Login';
 import Register from "./components/pages/admin/auth/Register";
+import AddNews from "./components/pages/admin/news/AddNews";
+import EditNews from "./components/pages/admin/news/EditNews";
 
 
 const Routes = (props) => {
@@ -30,6 +32,12 @@ const Routes = (props) => {
             )} />
             <Route path="/admin-pages/logout" render={props => (
                 isLoggedIn ? <Logout {...props} /> : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
+            )} />
+            <Route path="/admin-pages/news/add-news" render={props => (
+                isLoggedIn ? <AddNews {...props} /> : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
+            )} />
+            <Route path="/admin-pages/news/edit-news" render={props => (
+                isLoggedIn ? <EditNews {...props} /> : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
             )} />
         </div>
     );
