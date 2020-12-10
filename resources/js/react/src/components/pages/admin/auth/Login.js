@@ -21,11 +21,11 @@ const Login = (props) => {
     useEffect(() => {
         // console.log('useEffect here')
         dispatch(resetAdminAuthResponseAction())
-    }, [])
+    })
 
     const handleInputChange = (e) => {
-        console.log('handleInputChange here')
-        console.log(e.target.value)
+        // console.log('handleInputChange here')
+        // console.log(e.target.value)
             setValues({
                 ...inputFields,
                 [e.target.id]: e.target.value
@@ -38,10 +38,8 @@ const Login = (props) => {
         dispatch(AdminLoginAction(inputFields, props));
     }
 
-    const displayMessage = (adminAuthResponse) => {
-        let divForMessages = document.querySelector('.div-for-messages');
+    const displayMessage = (adminAuthResponse, divForMessages) => {
         divForMessages.innerHTML = '';
-
         if(typeof adminAuthResponse == 'string') {
             divForMessages.innerHTML = '<div class="alert alert-success p-2 border-radius-5px">' + adminAuthResponse + '</div>';
         }
@@ -67,8 +65,8 @@ const Login = (props) => {
                 <Card className="p-2 text-center">
                     <h2 className="my-5"><b>Welcome to Admin Login</b></h2>
 
-                    { adminAuthResponse != '' && typeof adminAuthResponse != null ?  displayMessage(adminAuthResponse) : ''}
-                    <div className="div-for-messages"></div>
+                    <div id="div-for-messages"></div>
+                    { adminAuthResponse != '' && typeof adminAuthResponse != null ?  displayMessage(adminAuthResponse, document.getElementById('div-for-messages')) : ''}
 
                     <form onSubmit={adminLogin}>
                         <div>

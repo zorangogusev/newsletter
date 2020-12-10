@@ -5,12 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Logout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/Auth/AdminAuthActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/Auth/AdminAuthReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +152,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../multi-auth/react-multi-auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../contact-manager/react-contact-manager" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -212,7 +211,7 @@
       <workItem from="1607281956212" duration="8875000" />
       <workItem from="1607370356460" duration="13567000" />
       <workItem from="1607441909458" duration="24237000" />
-      <workItem from="1607524821447" duration="12780000" />
+      <workItem from="1607524821447" duration="23870000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -270,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607466649303</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Actions for Register and Login Admin">
+      <created>1607538018113</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607538018113</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,42 +321,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>20</line>
+          <line>22</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>34</line>
+          <line>36</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>27</line>
+          <line>29</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>47</line>
+          <line>49</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>63</line>
+          <line>65</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>61</line>
+          <line>63</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>70</line>
+          <line>72</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>64</line>
+          <line>66</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -365,8 +371,43 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>28</line>
+          <line>30</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/api.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/routes/api.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>81</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>88</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>87</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>82</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
+          <line>84</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

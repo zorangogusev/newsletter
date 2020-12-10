@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Tymon\JWTAuth\Exceptions\TokenExpiredException;
 
 class AuthController extends Controller
 {
@@ -73,5 +75,20 @@ class AuthController extends Controller
             'token' => $jwt_token,
             'message' => 'Redirecting to dashboard.'
         ]);
+    }
+
+    public function logout()
+    {
+        try {
+            Auth::guard('users')->logout();
+
+            return response()->json([
+                'success' => true,
+            ], 200);
+        } catch(TokenExpiredException $e) {
+            return response()->json([
+                'success' => false,
+            ], 422);
+        }
     }
 }

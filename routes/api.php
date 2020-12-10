@@ -24,3 +24,8 @@ Route::group([ 'prefix' => 'admin', 'namespace' => 'User'], function() {
     Route::post('login', [AuthController::class, 'login']);
 
 });
+
+Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth']], function(){
+
+    Route::post('logout', [AuthController::class, 'logout']);
+});

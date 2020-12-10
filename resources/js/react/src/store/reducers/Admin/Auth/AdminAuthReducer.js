@@ -39,6 +39,21 @@ const AdminAuthReducer = (state = initState, action) =>
                 ...state,
                 adminAuthResponse: action.response
             }
+
+        case 'LOGOUT_SUCCESS':
+            // console.log('LOGOUT_SUCCESS here')
+            return {
+                ...state,
+                isLoggedIn: false,
+                adminAuthResponse: ''
+            }
+
+        case 'LOGOUT_ERROR':
+            // console.log('LOGIN_ERROR here')
+            return {
+                ...state,
+                adminAuthResponse: ''
+            }
         case 'RESET_AUTH_RESPONSE':
             // console.log('RESET_AUTH_RESPONSE here')
             return {

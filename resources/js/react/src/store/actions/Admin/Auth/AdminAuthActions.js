@@ -5,11 +5,6 @@ const BASE_API_URL = 'http://newsletter.deb.test:8081/api/';
 
 export const AdminRegisterAction = (inputFields, props) =>
 {
-    console.log('AdminRegisterAction here');
-    console.log(inputFields);
-
-
-
     return (dispatch) => {
         dispatch({type: 'RESET_AUTH_RESPONSE'})
         dispatch({type: 'LOADING'})
@@ -48,9 +43,31 @@ export const AdminLoginAction = (inputFields, props) =>
             }).catch(response => {
             console.log('catch error here')
             dispatch({type: 'LOGIN_ERROR', response})
-
         });
 
+    }
+}
+
+export const AdminLogoutAction = (history) => {
+    return (dispatch) => {
+        dispatch({type: 'RESET_AUTH_RESPONSE'})
+        let token = localStorage.getItem('admin-token')
+        // console.log(token)
+
+        axios.post(BASE_API_URL + 'admin/logout', {"token": token})
+            .then(response => {
+                if (response.data.hasOwnProperty('success') && response.data.success == true) {
+                    localStorage.removeItem('admin-token')
+                    // window.location.href = '/login';
+                    dispatch({type: 'LOGOUT_SUCCESS' })
+
+                } else if(response.data.hasOwnProperty('success') && response.data.success == false) {
+                    dispatch({type: 'LOGOUT_ERROR', response})
+                }
+            }).catch(response => {
+                console.log('catch error here')
+                dispatch({type: 'LOGIN_ERROR', response})
+        });
     }
 }
 
