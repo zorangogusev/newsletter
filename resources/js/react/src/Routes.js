@@ -36,7 +36,7 @@ const Routes = (props) => {
             <Route path="/admin-pages/news/add-news" render={props => (
                 isLoggedIn ? <AddNews {...props} /> : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
             )} />
-            <Route path="/admin-pages/news/edit-news" render={props => (
+            <Route path="/admin-pages/news/edit-news/:id" render={props => (
                 isLoggedIn ? <EditNews {...props} /> : <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
             )} />
         </div>

@@ -7,6 +7,7 @@ import { useStyles } from "../../../../styles";
 import { TextareaAutosize } from "@material-ui/core";
 import { useDispatch, useSelector } from 'react-redux';
 import { addNews } from "../../../../store/actions/Admin/News/AdminNewsActions";
+import FormControl from "@material-ui/core/FormControl";
 
 const AddNews = (props) => {
 
@@ -24,6 +25,7 @@ const AddNews = (props) => {
         body: '',
         category_id: '1',
         image: '',
+        display_image: '',
     });
 
     const handleInputChange = (e) => {
@@ -45,14 +47,23 @@ const AddNews = (props) => {
     }
 
     const fileTransform = (e) => {
-
         getBase64(e.target.files[0], (base64String) => {
             setValues({
                 ...fields,
                 image: base64String
             });
         })
+        onImageChangeDisplayImage(e);
+    }
 
+    const onImageChangeDisplayImage = (e) => {
+        if (e.target.files && e.target.files[0]) {
+            let reader = new FileReader();
+            reader.onload = (e) => {
+                setValues({...fields, display_image: e.target.result});
+            };
+            reader.readAsDataURL(e.target.files[0]);
+        }
     }
 
     const displayMessage = () => {
@@ -121,12 +132,14 @@ const AddNews = (props) => {
                                 id="category_id"
                                 value="1"
                                 disabled
-                                value={fields.category_id}
                             />
                         </div>
-                        <input id="image" type="file" onChange={fileTransform} />
-
-
+                        <div style={{ margin:  53, justifyContent: 'center', maxWidth:1000, textAlign: 'left', }}>
+                            <FormControl>
+                                <img src={fields.display_image}  className="image-restyle"  />
+                                <input id="image" type="file" onChange={fileTransform} />
+                            </FormControl>
+                        </div>
                     </div>
                 </form>
             </Card>

@@ -35,3 +35,43 @@ export const addNews = (fields) => {
         });
     }
 }
+
+export const loadDataForNews = (id) => {
+
+    return (dispatch) => {
+        console.log('action editNews here')
+        let token = localStorage.getItem('admin-token')
+        return new Promise((resolve, reject) => {
+            axios.get(BASE_API_URL + 'admin/get-single-news/' + token + '/' + id)
+                .then(response => {
+                    // console.log(response);
+                    dispatch({type:'GET_NEWS_FOR_EDIT_SUCCESS', response})
+                    resolve(response)
+                })
+                .catch(response => {
+                // console.log('catch error here')
+                dispatch({type:'GET_NEWS_FOR_EDIT_ERROR', response})
+                reject(response)
+            });
+
+        })
+    }
+}
+
+export const editSingleNews = (fields, id) => {
+
+    return (dispatch) => {
+        // console.log('editSingleNews here')
+        let token = localStorage.getItem('admin-token')
+        fields.token = token;
+        axios.post(BASE_API_URL + 'admin/edit-news/' + id, fields)
+            .then(response => {
+                // console.log(response);
+                dispatch({type:'EDIT_NEWS_SUCCESS', response})
+                // window.location.href = '/admin-pages/dashboard';
+            }).catch(response => {
+            console.log('catch error here')
+            dispatch({type:'EDIT_NEWS_ERROR', response})
+        });
+    }
+}

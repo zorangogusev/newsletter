@@ -30,6 +30,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth
 
     Route::get('/get-all-news/{token}', [NewsController::class, 'getAllNews']);
     Route::post('/add-news', [NewsController::class, 'addNews']);
+    Route::get('/get-single-news/{token}/{id}', [NewsController::class, 'getSingleNews']);
+    Route::post('/edit-news/{id}', [NewsController::class, 'editNews']);
 
     Route::post('logout', [AuthController::class, 'logout']);
 });
