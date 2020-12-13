@@ -141,7 +141,7 @@ class NewsController extends Controller
         if(!$find_news_for_edit) {
             return response()->json([
                 'success' => false,
-                'message' => 'please this news has no valid id'
+                'message' => 'This news has no valid id'
             ], 200);
         }
 
@@ -182,12 +182,36 @@ class NewsController extends Controller
         if($new_news_image == null) {
 
         } else {
-            file_put_contents('./news_images/' . $image_file_name, $fileBin);
+            file_put_contents('/news_images/' . $image_file_name, $fileBin);
         }
 
         return response()->json([
             'success' => true,
             'message' => 'News added successfully.'
         ], 200);
+    }
+
+    public function deleteNews($token, $id)
+    {
+        $user = auth('users')->authenticate($token);
+        $user_id = $user->id;
+        $getNewsFromDatabase = $this->news::where('user_id', $user_id)->find($id);
+
+        if(!$getNewsFromDatabase) {
+            return response()->json([
+                'success' => false,
+                'message' => 'News with this id doesnt exist '
+            ], 200);
+        }
+
+        $getFile = $getNewsFromDatabase->image;
+        if($getNewsFromDatabase->delete()) {
+            $getFile == 'default-image-for-news.jpg' ? : unlink(public_path() . '/news_images/' . $getFile);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'News deleted successfully.'
+            ]);
+        }
     }
 }

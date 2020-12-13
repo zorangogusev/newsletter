@@ -18,6 +18,7 @@ const EditNews = (props) => {
     const dispatch = useDispatch();
 
     const adminEditNews = useSelector(state => state.adminNews.adminEditNews);
+    const adminEditNewsMessage = useSelector(state => state.adminNews.adminEditNewsMessage);
 
     const [fields, setValues] = useState({
         title: '',
@@ -46,6 +47,7 @@ const EditNews = (props) => {
                 })
         return () => {
             document.getElementById('image').value = '';
+            dispatch({ type: 'RESET_EDIT_NEWS_VARS'});
         }
 
     }, [])
@@ -100,27 +102,45 @@ const EditNews = (props) => {
         }
     }
 
-
-
-
-
     return (
         <div className="mt-5">
             <Card className="p-2 text-center">
+
+                {
+                    adminEditNewsMessage && adminEditNewsMessage.data.success == true
+                    ? <div className="alert alert-success p-2 border-radius-5px">{ adminEditNewsMessage.data.message }</div>
+                    : ''
+                }
+
+                {
+                    adminEditNewsMessage && adminEditNewsMessage.data.success == false
+                        ? <div className="alert alert-danger p-2 border-radius-5px">{ adminEditNewsMessage.data.message }</div>
+                        : ''
+                }
+
 
                 { adminEditNews
                     ?
 
                     <form onSubmit={handleSubmit} >
-                        <div className="text-right">
-                            <Button type="submit"
-                                    style={{margin: 20}}
-                                    variant="contained"
-                                    color="primary"
-                                    endIcon={<AccountCircleIcon/>}
-                            >
-                                <b>Edit News</b>
-                            </Button>
+                        <div className="row">
+                            <div className="text-left col-6">
+                                <Button
+                                        style={{margin: 20}}
+                                        onClick={() => { props.history.goBack() }}
+                                >
+                                    <b>Go Back</b>
+                                </Button>
+                            </div>
+                            <div className="text-right col-6">
+                                <Button type="submit"
+                                        style={{margin: 20}}
+                                        variant="contained"
+                                        color="primary"
+                                >
+                                    <b>Edit News</b>
+                                </Button>
+                            </div>
                         </div>
                         <div>
                             <TextField

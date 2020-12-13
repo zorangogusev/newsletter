@@ -32,6 +32,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth
     Route::post('/add-news', [NewsController::class, 'addNews']);
     Route::get('/get-single-news/{token}/{id}', [NewsController::class, 'getSingleNews']);
     Route::post('/edit-news/{id}', [NewsController::class, 'editNews']);
+    Route::post('/delete-news/{token}/{id}', [NewsController::class, 'deleteNews']);
 
     Route::post('logout', [AuthController::class, 'logout']);
 });

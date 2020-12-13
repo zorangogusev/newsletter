@@ -86,15 +86,25 @@ const AddNews = (props) => {
                 { adminAddNews ?  displayMessage(adminAddNews) : '' }
 
                 <form onSubmit={createNewNews}>
-                    <div className="text-right">
-                        <Button type="submit"
+                    <div className="row">
+                        <div className="text-left col-6">
+                            <Button
                                 style={{margin: 20}}
-                                variant="contained"
-                                color="primary"
-                                endIcon={<AccountCircleIcon/>}
-                        >
-                            <b>Add News</b>
-                        </Button>
+                                color="info"
+                                onClick={() => { props.history.goBack() }}
+                            >
+                                <b>Go Back</b>
+                            </Button>
+                        </div>
+                        <div className="text-right col-6">
+                            <Button type="submit"
+                                    style={{margin: 20}}
+                                    variant="contained"
+                                    color="primary"
+                            >
+                                <b>Add News</b>
+                            </Button>
+                        </div>
                     </div>
                     <div>
                         <TextField

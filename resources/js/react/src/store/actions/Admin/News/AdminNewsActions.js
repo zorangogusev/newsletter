@@ -75,3 +75,20 @@ export const editSingleNews = (fields, id) => {
         });
     }
 }
+
+export const deleteNewsAction = (id) => {
+
+    return (dispatch) => {
+        console.log('deleteNews here')
+        console.log(id)
+        let token = localStorage.getItem('admin-token')
+        axios.post(BASE_API_URL + 'admin/delete-news/' + token + '/' + id)
+            .then(response => {
+                // console.log(response);
+                dispatch({type:'DELETE_NEWS_SUCCESS', response})
+            }).catch(response => {
+            console.log('catch error here')
+            dispatch({type:'DELETE_NEWS_ERROR', response})
+        });
+    }
+}

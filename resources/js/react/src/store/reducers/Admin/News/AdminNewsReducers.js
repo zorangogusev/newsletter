@@ -2,6 +2,8 @@ const initState = {
     adminNewsResponse: '',
     adminAddNews: '',
     adminEditNews: '',
+    adminEditNewsMessage: '',
+    adminDeleteNewsMessage: '',
 }
 
 const AdminNewsReducers = (state = initState, action) =>
@@ -23,8 +25,8 @@ const AdminNewsReducers = (state = initState, action) =>
                 adminAddNews: action.response
             }
         case 'GET_NEWS_FOR_EDIT_SUCCESS':
-            console.log('GET_NEWS_FOR_EDIT_SUCCESS here')
-            console.log(action.response);
+            // console.log('GET_NEWS_FOR_EDIT_SUCCESS here')
+            // console.log(action.response);
             return {
                 ...state,
                 adminEditNews: action.response
@@ -32,6 +34,7 @@ const AdminNewsReducers = (state = initState, action) =>
 
         case 'GET_NEWS_FOR_EDIT_ERROR':
             // console.log('GET_NEWS_FOR_EDIT_ERROR here')
+            // console.log(action.response)
             return {
                 ...state,
                 adminEditNews: action.response
@@ -39,10 +42,10 @@ const AdminNewsReducers = (state = initState, action) =>
 
         case 'EDIT_NEWS_SUCCESS':
             // console.log('EDIT_NEWS_SUCCESS here')
-            console.log(action)
+            // console.log(action)
             return {
                 ...state,
-                // adminEditNews: '',
+                adminEditNewsMessage: action.response,
             }
 
         case 'EDIT_NEWS_ERROR':
@@ -51,6 +54,30 @@ const AdminNewsReducers = (state = initState, action) =>
                 adminEditNews: '',
             }
 
+        case 'DELETE_NEWS_SUCCESS':
+            // console.log('DELETE_NEWS_SUCCESS here')
+            // console.log(action)
+            return {
+                ...state,
+                adminDeleteNewsMessage: action.response,
+            }
+
+        case 'DELETE_NEWS_ERROR':
+            // console.log('DELETE_NEWS_ERROR here')
+            // console.log(action)
+            return {
+                ...state,
+                adminDeleteNewsMessage: action.response,
+            }
+
+        case 'RESET_EDIT_NEWS_VARS':
+            // console.log('RESET_EDIT_NEWS_VARS here')
+            return {
+                ...state,
+                adminEditNewsMessage: '',
+                adminEditNews: '',
+                adminDeleteNewsMessage: '',
+            }
         default:
             return state
     }
