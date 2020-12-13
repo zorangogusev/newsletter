@@ -90,7 +90,6 @@ const AddNews = (props) => {
                         <div className="text-left col-6">
                             <Button
                                 style={{margin: 20}}
-                                color="info"
                                 onClick={() => { props.history.goBack() }}
                             >
                                 <b>Go Back</b>

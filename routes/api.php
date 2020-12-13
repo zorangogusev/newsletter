@@ -28,7 +28,7 @@ Route::group([ 'prefix' => 'admin', 'namespace' => 'User'], function() {
 
 Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth']], function(){
 
-    Route::get('/get-all-news/{token}', [NewsController::class, 'getAllNews']);
+    Route::get('/get-all-news/{token}/{pagination?}', [NewsController::class, 'getAllNews']);
     Route::post('/add-news', [NewsController::class, 'addNews']);
     Route::get('/get-single-news/{token}/{id}', [NewsController::class, 'getSingleNews']);
     Route::post('/edit-news/{id}', [NewsController::class, 'editNews']);

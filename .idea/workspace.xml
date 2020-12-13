@@ -5,11 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/EditNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/EditNews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -219,7 +218,7 @@
       <workItem from="1607641242124" duration="792000" />
       <workItem from="1607695765921" duration="32345000" />
       <workItem from="1607786519631" duration="7476000" />
-      <workItem from="1607868297670" duration="5569000" />
+      <workItem from="1607868297670" duration="13937000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -312,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607797785804</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Admin dashboard CRUD for news">
+      <created>1607874491821</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607874491821</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,62 +455,57 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>21</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>34</line>
+          <line>44</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>41</line>
+          <line>51</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>48</line>
+          <line>58</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>42</line>
+          <line>52</line>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>90</line>
+          <line>100</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>82</line>
+          <line>92</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>83</line>
+          <line>93</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>87</line>
+          <line>97</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>99</line>
+          <line>109</line>
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>100</line>
+          <line>110</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>121</line>
+          <line>131</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -514,48 +515,118 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>128</line>
+          <line>138</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>137</line>
+          <line>147</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>152</line>
+          <line>162</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>153</line>
+          <line>163</line>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>155</line>
+          <line>165</line>
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>156</line>
+          <line>166</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>160</line>
+          <line>170</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>167</line>
+          <line>177</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
-          <line>174</line>
+          <line>184</line>
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>23</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>26</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>145</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>150</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>157</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>159</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>158</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>64</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>62</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>63</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>65</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>89</line>
+          <option name="timeStamp" value="73" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

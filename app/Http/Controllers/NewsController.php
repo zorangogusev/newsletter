@@ -17,16 +17,26 @@ class NewsController extends Controller
         $this->base_url = $urlGenerator->to('/');
     }
 
-    public function getAllNews(Request $request)
+    public function getAllNews($token, $pagination = null)
     {
-        $user_token = $request->token;
-        $user = auth('users')->authenticate($user_token);
+        $user = auth('users')->authenticate($token);
         $user_id = $user->id;
-        $all_news = $this->news->where('user_id', $user_id)->orderBy('id', 'DESC')->get()->toArray();
+        $file_directory = $this->base_url . '/news_images';
 
+        if ($pagination == null) {
+            $all_news = $this->news->where('user_id', $user_id)->orderBy('id', 'DESC')->get()->toArray();
+            return response()->json([
+                'success' => true,
+                'data' => $all_news,
+                'file_directory' => $file_directory,
+            ], 200);
+        }
+
+        $all_news = $this->news->where('user_id', $user_id)->orderBy('id', 'DESC')->paginate($pagination);
         return response()->json([
             'success' => true,
             'data' => $all_news,
+            'file_directory' => $file_directory,
         ], 200);
     }
 
@@ -50,7 +60,7 @@ class NewsController extends Controller
         $user = auth('users')->authenticate($user_token);
         $user_id = $user->id;
 
-        $news_image = $request->image;
+        $news_image = $request->display_image;
         $image_file_name = '';
         if($news_image == null) {
             $image_file_name = 'default-image-for-news.jpg';
@@ -77,7 +87,7 @@ class NewsController extends Controller
         if($news_image == null) {
 
         } else {
-            file_put_contents('/news_images/' . $image_file_name, $fileBin);
+            file_put_contents('./news_images/' . $image_file_name, $fileBin);
         }
 
         $this->news->user_id = $user_id;
@@ -182,12 +192,12 @@ class NewsController extends Controller
         if($new_news_image == null) {
 
         } else {
-            file_put_contents('/news_images/' . $image_file_name, $fileBin);
+            file_put_contents('./news_images/' . $image_file_name, $fileBin);
         }
 
         return response()->json([
             'success' => true,
-            'message' => 'News added successfully.'
+            'message' => 'News edited successfully.'
         ], 200);
     }
 

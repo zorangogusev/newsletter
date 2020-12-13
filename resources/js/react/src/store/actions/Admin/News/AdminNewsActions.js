@@ -2,14 +2,23 @@ const axios = window.axios;
 
 const BASE_API_URL = 'http://newsletter.deb.test:8081/api/';
 
-export const getAllNews = () => {
+export const getAllNews = (page) => {
 
     return (dispatch) => {
-        console.log('getAllNews here')
+        // console.log('getAllNews here')
         let token = localStorage.getItem('admin-token')
-        axios.get(BASE_API_URL + 'admin/get-all-news/' + token,)
+        let pager = 5;
+        let getAllNewsUrl;
+        if(page == '') {
+            getAllNewsUrl = 'admin/get-all-news/' + token + '/' + pager;
+        } else {
+            getAllNewsUrl = 'admin/get-all-news/' + token + '/' + pager + '?page=' + page;
+        }
+        // console.log('getAllNewsUrl here')
+        // console.log(getAllNewsUrl)
+        axios.get(BASE_API_URL + getAllNewsUrl)
             .then(response => {
-                console.log(response);
+                // console.log(response);
                 dispatch({type:'GET_ALL_NEWS_SUCCESS', response})
             }).catch(response => {
             console.log('catch error here')
@@ -21,7 +30,8 @@ export const getAllNews = () => {
 export const addNews = (fields) => {
 
     return (dispatch) => {
-        console.log('addNews here')
+        // console.log('addNews here')
+        // console.log(fields)
         let token = localStorage.getItem('admin-token')
         fields.token = token;
         axios.post(BASE_API_URL + 'admin/add-news', fields)
