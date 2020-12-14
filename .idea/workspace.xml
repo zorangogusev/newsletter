@@ -4,12 +4,8 @@
     <list default="true" id="6d94b6d3-fe45-4a1c-8816-d7ab2c89324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/auth/Register.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +148,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../multi-auth/YOUTUBE-REACT-MULTIAUTH" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -218,7 +214,7 @@
       <workItem from="1607641242124" duration="792000" />
       <workItem from="1607695765921" duration="32345000" />
       <workItem from="1607786519631" duration="7476000" />
-      <workItem from="1607868297670" duration="23537000" />
+      <workItem from="1607868297670" duration="24537000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -325,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607888905866</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Admin dashboard Search">
+      <created>1607906387624</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1607906387624</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +359,8 @@
     <MESSAGE value="Logout Admin" />
     <MESSAGE value="Admin dashboard CRUD for news" />
     <MESSAGE value="Admin dashboard pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin dashboard pagination" />
+    <MESSAGE value="Admin dashboard Search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin dashboard Search" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

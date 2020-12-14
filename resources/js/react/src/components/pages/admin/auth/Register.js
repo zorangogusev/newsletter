@@ -131,7 +131,7 @@ const Register = (props) => {
                                         color="primary"
                                         endIcon={<AccountCircleIcon/>}
                                 >
-                                    <b>Login</b>
+                                    <b>Register</b>
                                 </Button>
                                 <br/>
                                 <div className={classes.linkContainer} style={{ textAlign: 'center', marginBottom: 0, }}>
