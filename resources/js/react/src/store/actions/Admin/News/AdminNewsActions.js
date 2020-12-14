@@ -1,5 +1,28 @@
 import { axios, BASE_API_URL } from "../../../../api";
 
+export const getNewsForHomePage = (page) => {
+    return (dispatch) => {
+        // console.log('getNewsForHomePage here')
+        let pager = 9;
+        let getAllNewsUrl;
+        if(page == '') {
+            getAllNewsUrl = 'home/' + pager;
+        } else {
+            getAllNewsUrl = 'home/' + pager + '?page=' + page;
+        }
+        axios.get(BASE_API_URL + getAllNewsUrl)
+            .then(response => {
+                // console.log('ok')
+                // console.log(response);
+                dispatch({type:'GET_ALL_NEWS_SUCCESS', response})
+            }).catch(response => {
+            // console.log('catch error here')
+            console.log(response);
+
+        });
+    }
+}
+
 export const getAllNews = (page) => {
 
     return (dispatch) => {

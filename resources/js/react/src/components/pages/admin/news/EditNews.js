@@ -182,11 +182,6 @@ const EditNews = (props) => {
                             </div>
                             <div style={{ margin:  53, justifyContent: 'center', maxWidth:1000, textAlign: 'left', }}>
                                 <FormControl>
-                                    {/*{*/}
-                                    {/*     fields.image == 'default-image-for-news.jpg'*/}
-                                    {/*        ?  <img src={location.protocol + '//' + location.host + '/news_images/default-image-for-news.jpg'}  className="image-restyle"  />*/}
-                                    {/*        : <img src={getImageForDisplay()} className="image-restyle" />*/}
-                                    {/*}*/}
                                     <img src={getImageForDisplay()} className="image-restyle" />
                                     <input id="image" type="file" onChange={fileTransform} />
                                 </FormControl>

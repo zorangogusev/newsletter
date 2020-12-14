@@ -44,6 +44,11 @@ export const useStyles = makeStyles(theme => ({
      marginRight:'15%',
      marginLeft:'15%',
      marginTop:'80px'
-   }
-
+   },
+    root: {
+        maxWidth: 345,
+    },
+    media: {
+        height: 140,
+    },
   }));

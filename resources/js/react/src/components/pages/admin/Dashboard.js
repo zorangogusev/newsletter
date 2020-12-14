@@ -134,7 +134,7 @@ const Dashboard = (props) => {
                             total={adminNewsResponse.data.total}
                             onChange={paginateContent}
                             className="pagination-restyle"
-                            prevIcon={<ArrowBackIosIcon tooltip="test" />}
+                            prevIcon={<ArrowBackIosIcon />}
                             jumpPrevIcon={<ArrowBackIcon/>}
                             jumpNextIcon={<ArrowForwardIcon/>}
                             nextIcon={<ArrowForwardIosIcon/>}

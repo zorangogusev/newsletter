@@ -42,8 +42,40 @@
     border: 2px solid red;
 }
 
+.home-page-div-for-card {
+    float:left;
+    width: 33%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-page-div-for-card .MuiCardContent-root {
+    min-height: 133px;
+}
+
+@media only screen and (max-width: 1199px) {
+    #home-main-div .MuiCardContent-root {
+        min-height: 153px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    .home-page-div-for-card .MuiCardContent-root {
+        min-height: 193px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .margin-top-div-login {
         margin-top: 50px;
+    }
+    .home-page-div-for-card {
+        width: 100%;
+    }
+
+    .home-page-div-for-card .MuiCardContent-root {
+        min-height: 153px;
     }
 }

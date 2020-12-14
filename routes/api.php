@@ -37,3 +37,5 @@ Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth
 
     Route::post('logout', [AuthController::class, 'logout']);
 });
+
+Route::get('/home/{pagination?}', [NewsController::class, 'homePage']);

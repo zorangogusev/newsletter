@@ -17,6 +17,30 @@ class NewsController extends Controller
         $this->base_url = $urlGenerator->to('/');
     }
 
+
+    public function homePage($pagination = null)
+    {
+        $test = 'test';
+        $file_directory = $this->base_url . '/news_images';
+
+        if ($pagination == null) {
+            $all_news = $this->news::orderBy('id', 'DESC')->get()->toArray();
+            return response()->json([
+                'success' => true,
+                'data' => $all_news,
+                'file_directory' => $file_directory,
+            ], 200);
+        }
+
+        $all_news = $this->news::orderBy('id', 'DESC')->paginate($pagination);
+        return response()->json([
+            'success' => true,
+            'data' => $all_news,
+            'file_directory' => $file_directory,
+        ], 200);
+    }
+
+
     public function getAllNews($token, $pagination = null)
     {
         $user = auth('users')->authenticate($token);
