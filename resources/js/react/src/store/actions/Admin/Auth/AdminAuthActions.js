@@ -1,7 +1,4 @@
-const axios = window.axios;
-
-const BASE_API_URL = 'http://newsletter.deb.test:8081/api/';
-
+import { axios, BASE_API_URL } from "../../../../api";
 
 export const AdminRegisterAction = (inputFields, props) =>
 {
@@ -29,6 +26,7 @@ export const AdminRegisterAction = (inputFields, props) =>
 export const AdminLoginAction = (inputFields, props) =>
 {
     return (dispatch) => {
+        // console.log('adminLoginAction here')
         dispatch({type: 'RESET_AUTH_RESPONSE'})
         dispatch({type: 'LOADING'})
 

@@ -1,6 +1,4 @@
-const axios = window.axios;
-
-const BASE_API_URL = 'http://newsletter.deb.test:8081/api/';
+import { axios, BASE_API_URL } from "../../../../api";
 
 export const getAllNews = (page) => {
 

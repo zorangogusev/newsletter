@@ -63,7 +63,7 @@ class NewsController extends Controller
         $news_image = $request->display_image;
         $image_file_name = '';
         if($news_image == null) {
-            $image_file_name = 'default-image-for-news.jpg';
+            $image_file_name = 'default-image-for-news.png';
         } else {
             $generate_name_for_image = uniqid() . '_' . time() . date('Ymd');
             $base64Image = $news_image;
@@ -156,12 +156,12 @@ class NewsController extends Controller
         }
 
         $image_news_name_from_database = $find_news_for_edit->image;
-        $image_news_name_from_database == 'default-image-for-news.jpg' ? : unlink(public_path() . '/news_images/' . $image_news_name_from_database);
+        $image_news_name_from_database == 'default-image-for-news.png' ? : unlink(public_path() . '/news_images/' . $image_news_name_from_database);
         $new_news_image = $request->display_image;
         $image_file_name = '';
 
         if($new_news_image == null) {
-            $image_file_name = 'default-image-for-news.jpg';
+            $image_file_name = 'default-image-for-news.png';
         } else {
             $generate_name = uniqid() . '_' . time() . date('Ymd');
             $base64Image = $new_news_image;
@@ -216,7 +216,7 @@ class NewsController extends Controller
 
         $getFile = $getNewsFromDatabase->image;
         if($getNewsFromDatabase->delete()) {
-            $getFile == 'default-image-for-news.jpg' ? : unlink(public_path() . '/news_images/' . $getFile);
+            $getFile == 'default-image-for-news.png' ? : unlink(public_path() . '/news_images/' . $getFile);
 
             return response()->json([
                 'success' => true,
