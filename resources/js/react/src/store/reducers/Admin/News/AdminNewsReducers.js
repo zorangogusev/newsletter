@@ -57,9 +57,22 @@ const AdminNewsReducers = (state = initState, action) =>
         case 'DELETE_NEWS_SUCCESS':
             // console.log('DELETE_NEWS_SUCCESS here')
             // console.log(action)
+            let { adminNewsResponse } = state;
+            let data = adminNewsResponse.data.data.filter(news => news.id != action.response.data.id );
+            adminNewsResponse.data.data = [];
+            data.map((mappingData) => {
+                adminNewsResponse.data.data.push({
+                    'id': mappingData.id,
+                    'title': mappingData.title,
+                    'body': mappingData.body,
+                    'image': mappingData.image,
+                })
+            });
+
             return {
                 ...state,
                 adminDeleteNewsMessage: action.response,
+                adminNewsResponse: { ...state.adminNewsResponse, adminNewsResponse },
             }
 
         case 'DELETE_NEWS_ERROR':
@@ -69,7 +82,21 @@ const AdminNewsReducers = (state = initState, action) =>
                 ...state,
                 adminDeleteNewsMessage: action.response,
             }
+        case 'SEARCH_NEWS_SUCCESS':
+            // console.log('SEARCH_NEWS_SUCCESS here')
+            // console.log(action)
+            return {
+                ...state,
+                adminNewsResponse: action.response.data,
+            }
 
+        case 'SEARCH_NEWS_ERROR':
+            // console.log('SEARCH_NEWS_ERROR here')
+            // console.log(action)
+            return {
+                ...state,
+                adminNewsResponse: action.response,
+            }
         case 'RESET_EDIT_NEWS_VARS':
             // console.log('RESET_EDIT_NEWS_VARS here')
             return {
@@ -77,6 +104,13 @@ const AdminNewsReducers = (state = initState, action) =>
                 adminEditNewsMessage: '',
                 adminEditNews: '',
                 adminDeleteNewsMessage: '',
+            }
+
+        case 'RESET_ADMIN_ADD_NEWS':
+            // console.log('RESET_EDIT_NEWS_VARS here')
+            return {
+                ...state,
+                adminAddNews: '',
             }
         default:
             return state

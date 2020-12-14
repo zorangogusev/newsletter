@@ -5,10 +5,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/AddNews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News/AdminNewsActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin/News/AdminNewsReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -218,7 +218,7 @@
       <workItem from="1607641242124" duration="792000" />
       <workItem from="1607695765921" duration="32345000" />
       <workItem from="1607786519631" duration="7476000" />
-      <workItem from="1607868297670" duration="13937000" />
+      <workItem from="1607868297670" duration="23537000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -318,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607874491821</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Admin dashboard pagination">
+      <created>1607888905866</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607888905866</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +355,8 @@
     <MESSAGE value="Actions for Register and Login Admin" />
     <MESSAGE value="Logout Admin" />
     <MESSAGE value="Admin dashboard CRUD for news" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin dashboard CRUD for news" />
+    <MESSAGE value="Admin dashboard pagination" />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin dashboard pagination" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -627,6 +635,36 @@
           <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
           <line>89</line>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>230</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>232</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>236</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>240</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>247</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/NewsController.php</url>
+          <line>250</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

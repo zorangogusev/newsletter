@@ -220,8 +220,38 @@ class NewsController extends Controller
 
             return response()->json([
                 'success' => true,
-                'message' => 'News deleted successfully.'
+                'message' => 'News deleted successfully.',
+                'id' => $id,
             ]);
         }
+    }
+
+    public function searchNews($search, $token, $pagination = null)
+    {
+        $test = 'test';
+
+        $file_directory = $this->base_url . './news_images';
+        $user = auth('users')->authenticate($token);
+        $user_id = $user->id;
+
+        if($pagination == null || $pagination == '') {
+            $non_paginated_search_query = $this->news::where('user_id', $user_id)
+                ->where('title', 'LIKE', "%$search%")->orderBy('id', 'DESC')->paginate($pagination)->orderBy('id', 'DESC')->get()->toArray();
+
+            return response()->json([
+                'success' => false,
+                'data' => $non_paginated_search_query,
+                'file_directory' => $file_directory
+            ], 200);
+        }
+
+        $paginated_search_query = $this->news::where('user_id', $user_id)
+            ->where('title', 'LIKE', "%$search%")->orderBy('id', 'DESC')->paginate($pagination);
+
+        return response()->json([
+            'success' => false,
+            'data' => $paginated_search_query,
+            'file_directory' => $file_directory
+        ], 200);
     }
 }

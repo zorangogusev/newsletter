@@ -27,20 +27,23 @@ export const getAllNews = (page) => {
     }
 }
 
-export const addNews = (fields) => {
+export const addNews = (fields, props) => {
 
     return (dispatch) => {
         // console.log('addNews here')
         // console.log(fields)
+        // console.log(props)
         let token = localStorage.getItem('admin-token')
         fields.token = token;
         axios.post(BASE_API_URL + 'admin/add-news', fields)
             .then(response => {
                 // console.log(response);
                 dispatch({type:'ADD_NEW_NEWS_SUCCESS', response})
-                window.location.href = '/admin-pages/dashboard';
+                // window.location.href = '/admin-pages/dashboard';
+                props.history.push('/admin-pages/dashboard')
             }).catch(response => {
             console.log('catch error here')
+            // console.log(response)
             dispatch({type:'ADD_NEW_NEWS_ERROR', response})
         });
     }
@@ -97,8 +100,32 @@ export const deleteNewsAction = (id) => {
                 // console.log(response);
                 dispatch({type:'DELETE_NEWS_SUCCESS', response})
             }).catch(response => {
-            console.log('catch error here')
+            // console.log('catch error here')
+            // console.log(response)
             dispatch({type:'DELETE_NEWS_ERROR', response})
+        });
+    }
+}
+
+export const getSearchNews = (search_content, page) => {
+    return (dispatch) => {
+        console.log('getSearchNews here')
+        let token = localStorage.getItem('admin-token')
+        let pager = 5;
+        let contactsDataUrl;
+        if(page == '') {
+            contactsDataUrl = 'admin/search-news/'  + search_content + '/' + token + '/' + pager;
+        } else {
+            contactsDataUrl = 'admin/search-news/' + search_content + '/' + token + '/' + pager + '?page=' + page;
+        }
+
+        axios.get(BASE_API_URL + contactsDataUrl)
+            .then(response => {
+                console.log(response);
+                dispatch({type:'SEARCH_NEWS_SUCCESS', response})
+            }).catch(response => {
+            console.log('catch error here')
+            dispatch({type:'SEARCH_NEWS_ERROR', response})
         });
     }
 }

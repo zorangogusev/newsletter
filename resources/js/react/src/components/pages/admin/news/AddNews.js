@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TextField from "@material-ui/core/TextField/TextField";
 import Button from "@material-ui/core/Button";
 import AccountCircleIcon from "@material-ui/core/SvgIcon/SvgIcon";
@@ -37,7 +37,7 @@ const AddNews = (props) => {
 
     const createNewNews = (e) => {
         e.preventDefault();
-        dispatch(addNews(fields))
+        dispatch(addNews(fields, props))
     }
 
     const getBase64 = (file, callback) => {
@@ -77,6 +77,12 @@ const AddNews = (props) => {
             }
         }
     }
+
+    useEffect(() =>{
+        return () => {
+            dispatch({ type: 'RESET_ADMIN_ADD_NEWS' })
+        }
+    });
 
     return (
         <div className="mt-5">
