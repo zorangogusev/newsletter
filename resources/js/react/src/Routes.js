@@ -10,7 +10,7 @@ import Login from './components/pages/admin/auth/Login';
 import Register from "./components/pages/admin/auth/Register";
 import AddNews from "./components/pages/admin/news/AddNews";
 import EditNews from "./components/pages/admin/news/EditNews";
-import ViewNews from "./components/pages/admin/news/ViewNews";
+import ViewNews from "./components/pages/ViewNews";
 
 const Routes = (props) => {
     const isLoggedIn = useSelector(state => state.adminAuth.isLoggedIn);

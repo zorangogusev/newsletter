@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6d94b6d3-fe45-4a1c-8816-d7ab2c89324e" name="Default Changelist" comment="Heroku">
+    <list default="true" id="6d94b6d3-fe45-4a1c-8816-d7ab2c89324e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/react/src/components/pages/admin/news/ViewNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/components/pages/ViewNews.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/react/src/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/react/src/createStore.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -147,23 +150,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../multi-auth/react-multi-auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../multi-auth/YOUTUBE-REACT-MULTIAUTH" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/react/src/components/pages" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin" />
+      <recent name="$PROJECT_DIR$/resources/js/react/src/components/admin" />
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/news_images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/resources/js/react/src" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/resources/js/react/src/components/layouts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/js/react/src/store/actions/Admin/News" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/store/reducers/Admin" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/components/pages" />
-      <recent name="$PROJECT_DIR$/resources/js/react/src/components/admin" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -216,7 +219,8 @@
       <workItem from="1607868297670" duration="28570000" />
       <workItem from="1607939847508" duration="5568000" />
       <workItem from="1607975325313" duration="16068000" />
-      <workItem from="1608005800230" duration="493000" />
+      <workItem from="1608005800230" duration="1150000" />
+      <workItem from="1608044794787" duration="2522000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore files">
       <created>1607210137842</created>
@@ -379,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607993208934</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Heroku">
+      <created>1608006350248</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608006350248</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

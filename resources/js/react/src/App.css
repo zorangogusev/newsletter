@@ -50,10 +50,16 @@
     margin-right: auto;
 }
 
+.home-page-div-for-card a:hover {
+    text-decoration: none;
+}
 .home-page-div-for-card .MuiCardContent-root {
     min-height: 133px;
 }
 
+#view-news-page .makeStyles-media-11 {
+    height: 340px !important;
+}
 #view-news-page .makeStyles-root-10 {
     max-width: 100%;
 }
