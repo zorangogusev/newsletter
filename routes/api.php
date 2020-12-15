@@ -39,3 +39,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'User', 'middleware' => ['auth
 });
 
 Route::get('/home/{pagination?}', [NewsController::class, 'homePage']);
+Route::get('/view-news/{id}', [NewsController::class, 'viewNewsPage']);

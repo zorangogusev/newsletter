@@ -14,6 +14,7 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -53,34 +54,33 @@ const Home = () => {
         return adminNewsResponse.data.data.map((news) => (
 
             <div key={news.id} className="home-page-div-for-card">
-                <Card className={classes.root} style={{  margin: 'auto'}}>
-                    <CardActionArea>
-                        <CardMedia
-                            className={classes.media}
-                            image={adminNewsResponse.file_directory + '/' + news.image}
-                            title="Contemplative Reptile"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="h2">
-                                {news.title}
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" component="p">
-                                {/*Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging*/}
-                                {/*across all continents except Antarctica*/}
-                                {/*{news.body}*/}
-                                { createNewsBodyForCard(news.body, 124) }
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                        <Button size="small" color="primary">
-                            Share
-                        </Button>
-                        <Button size="small" color="primary">
-                            Learn More
-                        </Button>
-                    </CardActions>
-                </Card>
+                <Link to={`view-news/${news.id}`}>
+                    <Card className={classes.root} style={{  margin: 'auto'}}>
+                        <CardActionArea>
+                            <CardMedia
+                                className={classes.media}
+                                image={adminNewsResponse.file_directory + '/' + news.image}
+                                title="Contemplative Reptile"
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="h2">
+                                    {news.title}
+                                </Typography>
+                                <Typography variant="body2" color="textSecondary" component="p">
+                                    { createNewsBodyForCard(news.body, 124) }
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                        <CardActions>
+                            <Button size="small" color="primary">
+                                Share
+                            </Button>
+                            <Button size="small" color="primary">
+                                Learn More
+                            </Button>
+                        </CardActions>
+                    </Card>
+                </Link>
             </div>
 
 

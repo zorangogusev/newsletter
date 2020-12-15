@@ -10,7 +10,7 @@ import Login from './components/pages/admin/auth/Login';
 import Register from "./components/pages/admin/auth/Register";
 import AddNews from "./components/pages/admin/news/AddNews";
 import EditNews from "./components/pages/admin/news/EditNews";
-
+import ViewNews from "./components/pages/admin/news/ViewNews";
 
 const Routes = (props) => {
     const isLoggedIn = useSelector(state => state.adminAuth.isLoggedIn);
@@ -18,6 +18,7 @@ const Routes = (props) => {
     return (
         <div>
             <Route exact path="/" component={Home} />
+            <Route exact path="/view-news/:id" props={props} component={ViewNews} />
             <Route exact path="/about" component={About} />
             <Route path="/login" render={props => (
                 isLoggedIn ? <Redirect to={{ pathname: 'admin-pages/dashboard', state: { from: props.location } }} /> : <Login {...props} />

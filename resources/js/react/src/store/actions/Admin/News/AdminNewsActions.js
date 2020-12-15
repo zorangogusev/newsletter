@@ -23,6 +23,21 @@ export const getNewsForHomePage = (page) => {
     }
 }
 
+export const getNewsForViewNewsPage = (id) => {
+    return (dispatch) => {
+        // console.log('getNewsForViewNewsPage here')
+        axios.get(BASE_API_URL + 'view-news/' + id)
+            .then(response => {
+                // console.log('ok')
+                // console.log(response);
+                dispatch({type:'GET_NEWS_FOR_VIEW_NEWS_PAGE_SUCCESS', response})
+            }).catch(response => {
+            // console.log('catch error here')
+            console.log(response);
+        });
+    }
+}
+
 export const getAllNews = (page) => {
 
     return (dispatch) => {

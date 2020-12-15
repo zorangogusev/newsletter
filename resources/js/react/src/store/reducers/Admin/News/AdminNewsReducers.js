@@ -4,6 +4,7 @@ const initState = {
     adminEditNews: '',
     adminEditNewsMessage: '',
     adminDeleteNewsMessage: '',
+    viewNews: '',
 }
 
 const AdminNewsReducers = (state = initState, action) =>
@@ -17,6 +18,18 @@ const AdminNewsReducers = (state = initState, action) =>
                 adminNewsResponse: action.response.data
             }
 
+        case 'GET_NEWS_FOR_VIEW_NEWS_PAGE_SUCCESS':
+            console.log('GET_NEWS_FOR_VIEW_NEWS_PAGE_SUCCESS here')
+            return {
+                ...state,
+                viewNews: action.response
+            }
+
+        case 'RESET_VIEW_NEWS':
+            return {
+                ...state,
+                viewNews: '',
+            }
         case 'ADD_NEW_NEWS_SUCCESS':
             // console.log('ADD_NEW_NEWS_SUCCESS here')
             // console.log(action.response);

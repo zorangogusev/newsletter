@@ -40,6 +40,17 @@ class NewsController extends Controller
         ], 200);
     }
 
+    public function viewNewsPage($id)
+    {
+        $file_directory = $this->base_url . '/news_images';
+        $get_news = $this->news::where('id', $id)->get();
+        return response()->json([
+            'success' => true,
+            'data' => $get_news,
+            'file_directory' => $file_directory,
+        ], 200);
+    }
+
 
     public function getAllNews($token, $pagination = null)
     {

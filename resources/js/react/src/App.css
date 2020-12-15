@@ -54,6 +54,10 @@
     min-height: 133px;
 }
 
+#view-news-page .makeStyles-root-10 {
+    max-width: 100%;
+}
+
 @media only screen and (max-width: 1199px) {
     #home-main-div .MuiCardContent-root {
         min-height: 153px;
