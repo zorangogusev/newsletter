@@ -7,8 +7,10 @@ import Button from '@material-ui/core/Button';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { useDispatch, useSelector } from 'react-redux';
 import {AdminLoginAction, resetAdminAuthResponseAction} from "../../../../store/actions/Admin/Auth/AdminAuthActions";
+import { useForm }  from "react-hook-form";
 
 const Login = (props) => {
+    const { register, handleSubmit, errors } = useForm();
 
     const dispatch = useDispatch();
 
@@ -32,8 +34,7 @@ const Login = (props) => {
             })
     }
 
-    const adminLogin = (e) => {
-        e.preventDefault();
+    const adminLogin = () => {
         // console.log('adminLogin here');
         dispatch(AdminLoginAction(inputFields, props));
     }
@@ -68,7 +69,7 @@ const Login = (props) => {
                     <div id="div-for-messages"></div>
                     { adminAuthResponse != '' && typeof adminAuthResponse != null ?  displayMessage(adminAuthResponse, document.getElementById('div-for-messages')) : ''}
 
-                    <form onSubmit={adminLogin}>
+                    <form onSubmit={handleSubmit(adminLogin)} noValidate>
                         <div>
                             <TextField
                                 type="email"
@@ -80,7 +81,15 @@ const Login = (props) => {
                                 id="email"
                                 onChange={handleInputChange}
                                 value={inputFields.email}
+                                name="email"
+                                inputRef={register({
+                                    required: true,
+                                    pattern: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                })}
+                                error={!!errors.email}
                             />
+                            {errors.email && errors.email.type === "required" && (<p className="error-input-field"><i>Email is required</i></p>) }
+                            {errors.email && errors.email.type === "pattern" && (<p className="error-input-field"><i>Email is not correct</i></p>) }
                         </div>
                         <div>
                             <div>
@@ -93,8 +102,13 @@ const Login = (props) => {
                                     variant="outlined"
                                     id="password"
                                     onChange={handleInputChange}
+                                    name="password"
                                     value={inputFields.password}
+                                    inputRef={register({ required: true, minLength: 6 })}
+                                    error={!!errors.password}
                                 />
+                                {errors.password && errors.password.type === "required" && (<p className="error-input-field"><i>Password is required</i></p>) }
+                                {errors.password && errors.password.type === "minLength" && (<p className="error-input-field"><i>Minimum 6 characters</i></p>) }
                             </div>
                             <div>
                                 <Button type="submit"

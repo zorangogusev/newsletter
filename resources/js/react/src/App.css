@@ -57,6 +57,14 @@
     min-height: 133px;
 }
 
+.error-input-field {
+    width: 90%;
+    display: inline-flex;
+    text-align: left;
+    font: italic;
+    color: #e3342f !important;
+}
+
 #view-news-page .makeStyles-media-11 {
     height: 340px !important;
 }
