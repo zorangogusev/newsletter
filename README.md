@@ -36,7 +36,7 @@ change owner and permissions on storage folder <br/>
         sudo chmod -R 777 storage storage
         sudo chown -R www-data:www-data storage storage
 
-run docker in .docker/dev/ folder 
+run docker
     
     sudo docker-compose up -d --build
 

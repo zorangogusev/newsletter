@@ -2,12 +2,12 @@ version: "3.2"
 services:
     newsletter:
         build:
-            context: .
+            context: .docker/dev
             dockerfile: Dockerfile
         container_name: newsletter
         networks:
           newsletter_net:
-            ipv4_address: 172.172.202.100
+            ipv4_address: 172.172.208.100
         volumes:
             - /var/www/html/react-lessons/newsletter/:/var/www/html/newsletter
         links:
@@ -21,9 +21,9 @@ services:
         container_name: newsletter-mariadb-10.1
         networks:
           newsletter_net:
-            ipv4_address: 172.172.202.101
+            ipv4_address: 172.172.208.101
         volumes:
-            - ../db_data:/var/lib/mysql
+            - ./.docker/db_data:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=zoran
             - MYSQL_DATABASE=newsletter
@@ -38,4 +38,4 @@ networks:
     ipam:
       driver: default
       config:
-      - subnet: 172.172.202.0/24
+      - subnet: 172.172.208.0/24
